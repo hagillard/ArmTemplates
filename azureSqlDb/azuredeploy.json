@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "tenantName": {
+        "dbName": {
             "type": "string"
         },
         "sqlServerId": {
@@ -21,11 +21,11 @@
     "resources": [
         {
             "type": "Microsoft.Sql/servers/databases",
-            "name": "[concat(parameters('sqlServerName'),'/',parameters('tenantName'))]",
+            "name": "[concat(parameters('sqlServerName'),'/',parameters('dbName'))]",
             "apiVersion": "2014-04-01",
             "location": "[resourceGroup().location]",
             "tags": {
-                "TENANT": "[parameters('tenantName')]"
+                "TENANT": "[parameters('dbName')]"
             },
             "properties": {
                 "collation": "SQL_Latin1_General_CP1_CI_AS",
@@ -34,11 +34,11 @@
             }
         },
         {
-            "name": "[concat(parameters('sqlServerName'), '/', parameters('tenantName'), '/current')]",
+            "name": "[concat(parameters('sqlServerName'), '/', parameters('dbName'), '/current')]",
             "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
             "apiVersion": "2014-04-01",
             "dependsOn": [
-                "[resourceId('Microsoft.Sql/servers/databases', parameters('sqlServerName'), parameters('tenantName'))]"
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('sqlServerName'), parameters('dbName'))]"
             ],
             "properties": {
               "status": "Enabled"
