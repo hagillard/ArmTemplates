@@ -1,0 +1,73 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": ""
+        },
+        "networkSecurityGroupId": {
+            "value": ""
+        },
+        "subnetName": {
+            "value": ""
+        },
+        "virtualNetworkId": {
+            "value": ""
+        },
+        "virtualMachineSize": {
+            "value": ""
+        },
+        "dataDiskSizeGB": {
+            "value": ""
+        }, 
+
+        "adminUsername": {
+            "reference": {
+                "keyVault": {
+                    "id": 
+                },
+                "secretName": 
+            }
+        },
+        "adminPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": 
+                },
+                "secretName": 
+            }
+        },
+        "diagnosticsStorageAccountName": {
+            "value": ""
+        },
+        "diagnosticsStorageAccountId": {
+            "value": ""
+        },
+        "domainToJoin": {
+            "value": ""
+        },
+        "ouPath": {
+            "value": ""
+        },
+        "domainUsername": {
+            "reference": {
+                "keyVault": {
+                    "id": ""
+                },
+                "secretName": ""
+            }
+        },
+        "domainJoinOptions": {
+            "value": 3
+        },
+        "domainPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": ""
+                },
+                "secretName": ""
+            }
+        }
+    
+    }
+}
