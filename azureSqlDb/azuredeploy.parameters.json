@@ -3,18 +3,18 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "tenantName": {
-            "value": "devhayley"
+            "value": ""
         },
         
     "sqlServerId": {
-        "value": "/subscriptions/f9b5c5d4-13ee-4fc4-b764-65f8a22770f1/resourceGroups/hv-sql-uks-dev-rg/providers/Microsoft.Sql/servers/hivedevuk"
+        "value": ""
 
     },
     "sqlServerName": {
-        "value": "hivedevuk"
+        "value": ""
     },
     "elasticPoolName": {
-        "value": "dev-sql-non-prod"
+        "value": ""
     }
 
     }
