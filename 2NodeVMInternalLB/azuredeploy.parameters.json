@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+
+        "prefix": {
+            "value": ""
+        },
+        "env":{
+            "value": ""
+        },
+        "publicIpAddressType": {
+            "value": ""
+        },
+        "publicIpAddressSku": {
+            "value": ""
+        },
+        "subnetName": {
+            "value": ""
+        },
+        "virtualNetworkId": {
+            "value": ""
+        },
+        "virtualMachineSize": {
+            "value": ""
+        },
+        "osDiskType": {
+             "value": ""
+        },
+        "adminUsername": {
+            "value": ""
+        },
+        "adminPassword": {
+            "value": ""
+        },
+        "diagnosticsStorageAccountName": {
+            "value": ""
+        }
+    }
+}

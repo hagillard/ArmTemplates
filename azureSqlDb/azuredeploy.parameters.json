@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "tenantName": {
+            "value": "devhayley"
+        },
+        
+    "sqlServerId": {
+        "value": "/subscriptions/f9b5c5d4-13ee-4fc4-b764-65f8a22770f1/resourceGroups/hv-sql-uks-dev-rg/providers/Microsoft.Sql/servers/hivedevuk"
+
+    },
+    "sqlServerName": {
+        "value": "hivedevuk"
+    },
+    "elasticPoolName": {
+        "value": "dev-sql-non-prod"
+    }
+
+    }
+
+}
